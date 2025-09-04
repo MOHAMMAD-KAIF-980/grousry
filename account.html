@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account - Fresh Veggie Store</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f4f9;
+      color: #333;
+    }
+
+    /* Header */
+    .header {
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li {
+      display: inline-block;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      padding: 5px 10px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: green;
+      border-bottom: 2px solid green;
+    }
+
+    /* Account Page */
+    .account-section {
+      max-width: 400px;
+      margin: 60px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    .account-section h2 {
+      margin-bottom: 20px;
+      color: darkgreen;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      gap: 15px;
+    }
+
+    .tabs button {
+      flex: 1;
+      padding: 10px;
+      background: #eee;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .tabs button.active {
+      background: green;
+      color: #fff;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      text-align: left;
+    }
+
+    input {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+      font-size: 15px;
+      width: 100%;
+    }
+
+    input:focus {
+      border-color: green;
+    }
+
+    .btn {
+      padding: 12px;
+      background: green;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: darkgreen;
+    }
+
+    /* Footer */
+    .footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <img src="https://img.icons8.com/color/96/vegetarian-food.png" width="80px" alt="logo">
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Product</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="account.html" class="active">Account</a></li>
+          </ul>
+        </nav>
+        <img src="https://img.icons8.com/ios-filled/50/shopping-cart.png" width="30px" height="30px" alt="cart">
+      </div>
+    </div>
+  </div>
+
+  <!-- Account Section -->
+  <div class="account-section">
+    <h2>My Account</h2>
+    <div class="tabs">
+      <button id="loginTab" class="active" onclick="showForm('login')">Login</button>
+      <button id="registerTab" onclick="showForm('register')">Register</button>
+    </div>
+
+    <!-- Login Form -->
+    <form id="loginForm">
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit" class="btn">Login</button>
+    </form>
+
+    <!-- Register Form -->
+    <form id="registerForm" style="display: none;">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <input type="password" placeholder="Confirm Password" required>
+      <button type="submit" class="btn">Register</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>© 2025 Fresh Veggie Store | Designed by Aditi Priya</p>
+  </div>
+
+  
+
+</body>
+</html>
