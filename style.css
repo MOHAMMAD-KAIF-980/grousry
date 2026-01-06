@@ -130,3 +130,9 @@ p {
   padding: 15px 0;
   margin-top: 40px;
 }
+
+.col-4 h4{
+  margin: 20px;
+  color: #333;
+
+}
